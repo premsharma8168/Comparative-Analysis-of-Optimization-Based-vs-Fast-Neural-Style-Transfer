@@ -1,0 +1,30 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments
+venv/
+env/
+.venv/
+.env/
+
+# Downloaded ML Models (too large for GitHub, fetched via script)
+models/*.t7
+models/*.pth
+!models/.gitkeep
+
+# User Uploads and Generated Results
+uploads/*
+!uploads/.gitkeep
+results/*
+!results/.gitkeep
+
+# IDE / Editor configuration
+.idea/
+.vscode/
+*.swp
+
+# OS generated files
+.DS_Store
+Thumbs.db

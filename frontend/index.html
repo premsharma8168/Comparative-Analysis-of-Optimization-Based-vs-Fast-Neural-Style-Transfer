@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Style Transfer Benchmark</title>
+    <meta name="description" content="A comparative analysis platform for Neural Style Transfer Methods.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+    
+    <div class="container glass-panel">
+        <header>
+            <h1 id="main-title">NST Benchmark</h1>
+            <p>Comparative Analysis: Optimization VS Fast Neural Style Transfer</p>
+        </header>
+
+        <main>
+            <div class="comparison-grid">
+                <!-- Optimization Based Panel -->
+                <div class="panel glass-panel" id="opt-panel">
+                    <h2>Optimization-Based NST</h2>
+                    <p class="subtitle">High Quality • Iterative • Slower</p>
+                    
+                    <form id="opt-form">
+                        <div class="upload-group">
+                            <label for="opt-content">Content Image</label>
+                            <input type="file" id="opt-content" accept="image/*" required>
+                        </div>
+                        <div class="upload-group">
+                            <label for="opt-style">Style Image</label>
+                            <input type="file" id="opt-style" accept="image/*" required>
+                        </div>
+                        <div class="upload-group">
+                            <label for="opt-steps">Iterations (10-300)</label>
+                            <input type="number" id="opt-steps" value="50" min="10" max="300">
+                        </div>
+                        <button type="submit" class="btn primary-btn" id="opt-btn">Generate</button>
+                    </form>
+
+                    <div class="result-box" id="opt-result-box">
+                        <div class="loader hidden" id="opt-loader"></div>
+                        <img id="opt-result-img" class="hidden" alt="Optimization NST Result">
+                        <div class="metrics hidden" id="opt-metrics">Time: <span id="opt-time"></span>s</div>
+                    </div>
+                </div>
+
+                <!-- Fast NST Panel -->
+                <div class="panel glass-panel" id="fast-panel">
+                    <h2>Fast NST</h2>
+                    <p class="subtitle">Feed-forward • Real-time • Less Flexible</p>
+                    
+                    <form id="fast-form">
+                        <div class="upload-group">
+                            <label for="fast-content">Content Image</label>
+                            <input type="file" id="fast-content" accept="image/*" required>
+                        </div>
+                        <div class="upload-group">
+                            <label for="fast-model-select">Select Style Model</label>
+                            <select id="fast-model-select">
+                                <option value="starry_night.t7">Starry Night</option>
+                                <option value="composition_vii.t7">Composition VII</option>
+                                <option value="la_muse.t7">La Muse</option>
+                                <option value="candy.t7">Candy</option>
+                            </select>
+                        </div>
+                        <div class="upload-spacer"></div>
+                        <button type="submit" class="btn primary-btn" id="fast-btn">Generate</button>
+                    </form>
+
+                    <div class="result-box" id="fast-result-box">
+                        <div class="loader hidden" id="fast-loader"></div>
+                        <img id="fast-result-img" class="hidden" alt="Fast NST Result">
+                        <div class="metrics hidden" id="fast-metrics">Time: <span id="fast-time"></span>s</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
