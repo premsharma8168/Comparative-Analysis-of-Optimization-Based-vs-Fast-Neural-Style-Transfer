@@ -68,3 +68,4 @@ Open your web browser and navigate directly to:
 2. Under **Select Style Model**, choose one of the pre-fetched `.t7` styles from the dropdown.
 3. Click **Generate**.
 4. The result will appear almost instantaneously.
+<img width="1158" height="929" alt="Screenshot 2026-03-25 110144" src="https://github.com/user-attachments/assets/9d175391-4e79-4f57-a07d-95345fcf527e" />
